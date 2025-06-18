@@ -1,0 +1,15 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+airflow/dags/__pycache__
+dbt/logs
+dbt/.user.yml
+postgres/data
+uv.lock

@@ -1,0 +1,33 @@
+version: 2
+
+sources:
+  - name: dev
+    database: "{{ env_var('POSTGRES_DB') }}"
+    tables:
+      - name: raw_weather_data
+        description: "Source table containing weather data pulled from the API"
+        columns:
+          - name: id
+            description: "Unique identifier for each weather record"
+          - name: city
+            description: "City for which the weather data is recorded"
+          - name: main_weather
+            description: "Main weather condition (e.g., Clear, Rain)"
+          - name: description
+            description: "Detailed description of the weather condition"
+          - name: temperature
+            description: "Current temperature in degrees Celsius"
+          - name: humidity
+            description: "Current humidity percentage"
+          - name: wind_speed
+            description: "Current wind speed in meters per second"
+          - name: wind_direction
+            description: "Wind direction in degrees"
+          - name: pressure
+            description: "Current atmospheric pressure in hPa"
+          - name: visibility
+            description: "Visibility in meters"
+          - name: utc_offset
+            description: "UTC offset in seconds for the weather data"
+          - name: inserted_at
+            description: "Timestamp of when the weather data was inserted into the database"
